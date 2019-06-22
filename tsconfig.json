@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
+    "allowJs": true,                       /* Allow javascript files to be compiled. */
+    "target": "ES2016",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
+    "module": "commonjs",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "sourceMap": true,                     /* Generates corresponding '.map' file. */
+    "outDir": "dist",                        /* Redirect output structure to the directory. */
+    /* Strict Type-Checking Options */
+    "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
+    "strict": true,                           /* Enable all strict type-checking options. */
+    "esModuleInterop": true,                   /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    // "emitDecoratorMetadata": false,         /* Enables experimental support for emitting type metadata for decorators. */
+  },
+  "include": [                                 // 需要编译的ts文件一个*表示文件匹配**表示忽略文件的深度问题
+    "src/**/*",
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+}
