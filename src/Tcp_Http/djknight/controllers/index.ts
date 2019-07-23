@@ -3,10 +3,10 @@ import * as context from '../declaring/context';
 
 export class Controller {
   reqContext: context.reqContext;
-  response: ServerResponse;
+  resContext: context.resContext;
 
-  constructor (reqContext: context.reqContext, res: ServerResponse) {
+  constructor (reqContext: context.reqContext, res: context.resContext) {
     this.reqContext = reqContext;
-    this.response = res;
+    this.resContext = res;
   }
 }

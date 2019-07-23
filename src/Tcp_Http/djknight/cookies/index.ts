@@ -1,18 +1,16 @@
-/* var parseCookie = function (cookie) { var cookies = {};
-if (!cookie) {
-return cookies; }
- var list = cookie.split(';');
-for (var i = 0; i < list.length; i++) {
-var pair = list[i].split('=');
-cookies[pair[0].trim()] = pair[1]; }
-return cookies; }; */
+import { cookieInterface, cookieOptions } from '../declaring/cookie';
 
-/* function parseCookie (cookie : string) : object{
-  const cookies : object = {};
-  if (!cookie) {
-    return cookies;
+export function parseCookie (rawCookie: string | undefined) : cookieInterface {
+  const cookie: cookieInterface = {};
+  if (!rawCookie) {
+    return cookie;
   }
 
-  const list : Array<string> = cookie.split(';');
-  const length =
-} */
+  const list: Array<string> = rawCookie.split(';');
+  list.forEach((item:string) => {
+    const pair = item.split('=');
+    cookie[pair[0].trim()] = pair[1];
+  })
+
+  return cookie;
+}
